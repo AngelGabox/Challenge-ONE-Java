@@ -2,11 +2,11 @@ import javax.swing.JOptionPane;
 
 public abstract class Conversor {
 	
-	public double montoAConvertir() {
+	public double montoAConvertir(String mensaje) {
 		boolean canContinue = false;
         Double number = 0.0;
         do {
-            String userResponse = JOptionPane.showInputDialog(null, "Ingresa la cantidad que deseas convertir tu dinero: ", 0);
+            String userResponse = JOptionPane.showInputDialog(null, mensaje, 0);
             try {
                 number =  Double.parseDouble(userResponse);
                 canContinue = true;
